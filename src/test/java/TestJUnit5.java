@@ -14,13 +14,13 @@ public class TestJUnit5 {
     @Test
     void test() {
         assertAll("test",
-                () -> assertEquals(1, 2),
+                () -> assertEquals(1, 1),
                 () -> assertEquals(1,1),
-                () -> assertEquals(1,3),
+                () -> assertEquals(1,1),
                 new Executable() {
                     @Override
                     public void execute() throws Throwable {
-                        assertEquals(1,4);
+                        assertEquals(1,2);
                     }
                 }
         );
